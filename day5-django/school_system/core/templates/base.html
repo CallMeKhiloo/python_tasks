@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>School System</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+  <body>
+    <nav>
+      <a href="{% url 'home' %}">Home</a> |
+      <a href="{% url 'student_page' %}">Student</a> |
+      <a href="{% url 'contact_us' %}">Contact Us</a>
+    </nav>
+
+    <hr />
+
+    {% block content %} {% endblock %}
+  </body>
+</html>
