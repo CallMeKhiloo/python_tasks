@@ -8,6 +8,6 @@ class Student(models.Model):
     image = models.ImageField(upload_to='students/', null=True,blank=True)
 
 class Feedback(models.Model):
-    email = models.EmailField()
+    email = models.EmailField(null=False)
     message = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
